@@ -19,7 +19,7 @@ $_SESSION['block'] = $_POST['block'];
 
 
 
-$sql = "insert into seller(Reg,otp) values ('$Reg','$otp')";
+$sql = "insert into customer(Reg,otp) values ('$Reg','$otp')";
 $retval = mysqli_query( $conn, $sql );
 
 
@@ -78,5 +78,5 @@ if(curl_errno($ch))
 curl_close($ch);
 
 echo $output;*/
-header('Location: http://localhost/Ecommerce/otpverify.html');
+header('Location: http://localhost/Ecommerce/customerVerify.html');
  ?>
