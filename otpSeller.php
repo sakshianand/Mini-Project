@@ -24,7 +24,7 @@ $retval = mysqli_query( $conn, $sql );
 
 
 //Your authentication key
-/*$authKey = "137617Avrt117V587dfc16";
+/*$authKey = "";
 
 //Multiple mobiles numbers separated by comma
 $mobileNumber = $Phone;
