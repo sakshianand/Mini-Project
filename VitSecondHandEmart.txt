@@ -1,0 +1,63 @@
+first page
+1. sign up as a seller
+2. sign up as customer
+
+Seller:
+name
+regno(username)
+sex
+(m/f)
+block //dropdown
+password
+confirm pass
+phn no
+email id
+
+otp: for verification
+
+Seller ::
+
+Name of the pdt
+description:
+price
+category::
+Educational equipments
+mobile tabs and accesories
+laptops and accesories
+sports equipments
+footwear
+Books
+clothing and accessories
+upload photo of the pdt
+
+Purpose: m/f/U
+
+Two options
+add,products display(card format)--sold not sold
+sold-- who and price
+
+
+customer::
+
+name
+regno(username)
+sex
+(m/f)
+block //dropdown
+password
+confirm pass
+phn no
+email id
+
+---
+---
+---
+Filter(categories in dropdown)
+---
+---
+---
+
+Cart(Add to the cart)
+display item and image and link to that pdt and delete
+For check out
+Message sent to seller and customer.
