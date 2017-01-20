@@ -15,6 +15,8 @@ $_SESSION['pass'] = $Pass;
 $_SESSION['phone'] = $Phone;
 $_SESSION['email'] = $Email;
 $_SESSION['sex'] = $Sex;
+$_SESSION['block'] = $_POST['block'];
+
 
 
 
@@ -77,5 +79,7 @@ if(curl_errno($ch))
 curl_close($ch);
 
 echo $output;*/
+
+
 header('Location: http://localhost/MiniProj/otpSeller.html');
  ?>
