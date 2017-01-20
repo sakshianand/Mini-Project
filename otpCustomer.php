@@ -16,6 +16,7 @@ $_SESSION['phone'] = $Phone;
 $_SESSION['email'] = $Email;
 $_SESSION['sex'] = $Sex;
 $_SESSION['block'] = $_POST['block'];
+$_SESSION['room'] = $_POST['room'];
 
 
 
