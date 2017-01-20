@@ -9,7 +9,7 @@ echo "not able to connect";
 }
 else
 {
-echo"connection established";
+//echo"connection established";
 }
 
 ?>
