@@ -15,8 +15,7 @@ session_start();
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Logo</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">About</a></li>
-        <li><a href="badges.html">Login</a></li>
+        <li><a href="#">Update Info</a></li>
       </ul>
     </div>
   </nav>
@@ -35,7 +34,7 @@ session_start();
           </div>
         </div>
         </a>
-        <a href="sellerform.html">
+        <a href="#">
         <div class="col s12 m6">
 
           <div class="card blue-grey darken-1">
