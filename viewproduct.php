@@ -3,8 +3,10 @@ session_start();
 include_once("Connection.php");
 $result ="select * from additem where Reg  = '{$_SESSION['reg']}'";
 $res = mysqli_query($conn,$result);
-$row = mysqli_fetch_array($res);
+
 $row_cnt = mysqli_num_rows($res);
+
+
 
 ?>
 <!DOCTYPE html>
@@ -47,7 +49,13 @@ $row_cnt = mysqli_num_rows($res);
       <img class="activator" src="photo/abc.png">
     </div>
     <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4"><?php echo $row['ProductName'] ?><i class="material-icons right">more_vert</i></span>
+      <span class="card-title activator grey-text text-darken-4"><?php $row = mysqli_fetch_array($res);
+  $ProductName[] = $row['ProductName'];
+ 
+
+   print $ProductName[$i]; 
+
+  ?><i class="material-icons right">more_vert</i></span>
       <p><a href="#">This is a link</a></p>
     </div>
     <div class="card-reveal">
