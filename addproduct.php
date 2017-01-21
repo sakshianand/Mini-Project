@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once("Connection.php");
 if(isset($_POST['btn_upload']))
 {
@@ -15,7 +16,7 @@ if(isset($_POST['btn_upload']))
 	$filetype =  $_FILES["file_img"]["type"];
 	$filepath = "photo/".$filename;
 	move_uploaded_file($filetmp, $filepath);
-	$sql = "insert into additem(ProductName,Description,Price,Category,img_name,img_path,img_type) values ('$Name','$des',$price,'$category','$filename','$filepath','$filetype')";
+	$sql = "insert into additem(reg,ProductName,Description,Price,Category,img_name,img_path,img_type) values ('{$_SESSION['reg']}','$Name','$des',$price,'$category','$filename','$filepath','$filetype')";
 	if(mysqli_query( $conn, $sql ))
 	{
 		echo "value inserted to db";
