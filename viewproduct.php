@@ -46,7 +46,7 @@ $row_cnt = mysqli_num_rows($res);
         
           <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="<?php $row = mysqli_fetch_array($res); $filepath[] = $row['img_path']; print $filepath[$i];  ?>">
+      <img class="activator" src="<?php $row = mysqli_fetch_array($res); $filepath[] = $row['img_path']; print $filepath[$i];  ?>" width="300" height="200">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4"><?php 
