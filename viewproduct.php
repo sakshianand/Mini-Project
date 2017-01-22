@@ -46,21 +46,25 @@ $row_cnt = mysqli_num_rows($res);
         
           <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="photo/abc.png">
+      <img class="activator" src="<?php $row = mysqli_fetch_array($res); $filepath[] = $row['img_path']; print $filepath[$i];  ?>">
     </div>
     <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4"><?php $row = mysqli_fetch_array($res);
+      <span class="card-title activator grey-text text-darken-4"><?php 
   $ProductName[] = $row['ProductName'];
  
 
    print $ProductName[$i]; 
 
   ?><i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
+      <!--<p><a href="#">This is a link</a></p>-->
     </div>
     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      <span class="card-title grey-text text-darken-4"><?php print $ProductName[$i] ?><i class="material-icons right">close</i></span>
+      <ul>
+      <li>Description : <?php  $des[] = $row['Description']; print $des[$i];  ?></li>
+      <li>Price: <?php  $price[] = $row['Price']; print $price[$i];  ?> </li>
+      <li>Category : <?php $category[] = $row['Category']; print $category[$i]; ?></li>
+      </ul>
     </div>
   </div>  
           </div>
