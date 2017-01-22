@@ -34,7 +34,7 @@ session_start();
           </div>
         </div>
         </a>
-        <a href="#">
+        <a href="viewproduct.php">
         <div class="col s12 m6">
 
           <div class="card blue-grey darken-1">
