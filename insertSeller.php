@@ -10,6 +10,7 @@ if(! mysqli_query( $conn, $sql ))
 die(mysqli_error($conn));}
 else{ 
 echo "successful";
+header('Location: http://localhost/MiniProj/dashboard.php');
 }
 }
 else
