@@ -15,13 +15,15 @@ session_start();
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Logo</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>Welcome <?php echo $_SESSION['name'] ?></li>
         <li><a href="updateCustomer.html">Update Info</a></li>
+
       </ul>
     </div>
   </nav>
-  <div class="container" style="margin-top: 5%;">
-  <h3 class="center-align wow zoomIn" >Welcome </h3>
-  </div>
+  <!--<div class="container" style="margin-top: 5%;">
+  <h3 class="center-align wow zoomIn" >Welcome <?php echo $_SESSION['name'] ?></h3>
+  </div>-->
  
        
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

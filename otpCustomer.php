@@ -25,7 +25,7 @@ $retval = mysqli_query( $conn, $sql );
 
 
 //Your authentication key
-/*$authKey = "137617Avrt117V587dfc16";
+$authKey = "137617Avrt117V587dfc16";
 
 //Multiple mobiles numbers separated by comma
 $mobileNumber = $Phone;
@@ -78,6 +78,6 @@ if(curl_errno($ch))
 
 curl_close($ch);
 
-echo $output;*/
+echo $output;
 header('Location: http://localhost/MiniProj/customerVerify.html');
  ?>
