@@ -79,5 +79,5 @@ if(curl_errno($ch))
 curl_close($ch);
 
 echo $output;*/
-header('Location: http://localhost/Ecommerce/customerVerify.html');
+header('Location: http://localhost/MiniProj/customerVerify.html');
  ?>
