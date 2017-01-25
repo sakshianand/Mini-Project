@@ -1,9 +1,5 @@
 <?php
 session_start();
-include_once("Connection.php");
-$result ="select * from additem ";
-$res = mysqli_query($conn,$result);
-$row_cnt = mysqli_num_rows($res);
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,13 +23,13 @@ $row_cnt = mysqli_num_rows($res);
             <div class="collapsible-body">
               <ul>
              <li><div class="divider"></div></li>
-                <li><a href="#">Educational Equipments</a></li>
-                <li><a href="#">Mobile tabs and Accesories</a></li>
-                <li><a href="#">Laptops and Accesories</a></li>
-                <li><a href="#">Sports And Equipments</a></li>
-                <li><a href="#">Footwear</a></li>
-                <li><a href="#">Books</a></li>
-                <li><a href="#">Clothing and Accesories</a></li>
+                <li><a href="#" id="edu">Educational Equipments</a></li>
+                <li><a href="#" id="mobile">Mobile tabs and Accesories</a></li>
+                <li><a href="#" id="laptops">Laptops and Accesories</a></li>
+                <li><a href="#" id="sports">Sports And Equipments</a></li>
+                <li><a href="#" id="footwear">Footwear</a></li>
+                <li><a href="#" id="books">Books</a></li>
+                <li><a href="#" id="clothes">Clothing and Accesories</a></li>
                 </ul>
             </div>
           </li>
@@ -59,43 +55,13 @@ $row_cnt = mysqli_num_rows($res);
   <h3 class="center-align wow zoomIn" >The Products available on Second Hand EMart</h3>
   </div>
   <div class="container wow fadeInDown" data-wow-delay="1s" style="margin-top: 7%;">
-<div class="row">
-
-        
-        <?php
-        for($i=0;$i<$row_cnt;$i++)
-        { ?>
-<div class="col s12 m4 l4">
-        
-          <div class="card">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="<?php $row = mysqli_fetch_array($res); $filepath[] = $row['img_path']; print $filepath[$i];  ?>" width="300" height="200">
-    </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4"><?php 
-  $ProductName[] = $row['ProductName'];
- 
-
-   print $ProductName[$i]; 
-
-  ?><i class="material-icons right">more_vert</i></span>
-      <!--<p><a href="#">This is a link</a></p>-->
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4"><?php print $ProductName[$i] ?><i class="material-icons right">close</i></span>
-      <ul>
-      <li>Description : <?php  $des[] = $row['Description']; print $des[$i];  ?></li>
-      <li>Price: <?php  $price[] = $row['Price']; print $price[$i];  ?> </li>
-      <li>Category : <?php $category[] = $row['Category']; print $category[$i]; ?></li>
-      <a href="#">Full info</a>
-      </ul>
-
-      <a class="waves-effect waves-light btn">Add to Cart</a>
-    </div>
-  </div>  
+<div class="row" id="full">
+<?php include_once('maincontent.php'); ?>
           </div>
-          <?php
-          }?>
+          <div class="row" id="edu">
+
+            
+          </div>
     </div>
     </body>
    <!-- <nav>
@@ -119,7 +85,7 @@ $row_cnt = mysqli_num_rows($res);
 <script type="text/javascript">
   $(".button-collapse").sideNav();
     $('.button-collapse').sideNav({
-      menuWidth: , // Default is 240
+      menuWidth: 240, // Default is 240
       edge: 'right', // Choose the horizontal origin
       closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
       draggable: true // Choose whether you can drag to open on touch screens
@@ -130,5 +96,163 @@ $row_cnt = mysqli_num_rows($res);
               <script>
               new WOW().init();
               </script>
+<script type="text/javascript">
+ $(document).ready(function(){
+    $("#edu").click(function(){
+      $("#full").load("cuseducation.php");
+    });
+});
+ $(document).ready(function(){
+    $("#mobile").click(function(){
+      $("#full").load("mobile.php");
+    });
+});
+ $(document).ready(function(){
+    $("#laptops").click(function(){
+      $("#full").load("laptops.php");
+    });
+});
+ $(document).ready(function(){
+    $("#sports").click(function(){
+      $("#full").load("sports.php");
+    });
+});
+  $(document).ready(function(){
+    $("#footwear").click(function(){
+      $("#full").load("footwear.php");
+    });
+});
+    $(document).ready(function(){
+    $("#books").click(function(){
+      $("#full").load("books.php");
+    });
+});
+        $(document).ready(function(){
+    $("#clothes").click(function(){
+      $("#full").load("clothes.php");
+    });
+});
+</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
