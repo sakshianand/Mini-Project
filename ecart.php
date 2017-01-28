@@ -1,3 +1,12 @@
+<?php
+session_start();
+include_once("Connection.php");
+$result ="select * from ecart where reg  = '{$_SESSION['reg']}'";
+$res = mysqli_query($conn,$result);
+
+$row_cnt = mysqli_num_rows($res);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +38,7 @@
 
 <ul class="collapsible" data-collapsible="accordion">
        <?php
-       $count=4;
+      $count=4;
       $json=array
       (
         array("shoes","great shoes blue in color"),
@@ -37,11 +46,20 @@
         array("book","maths book K.Indra"),
         array("mobile","black nokia lumia")
   );
-        for($i=0;$i<$count;$i++)
-        { ?>
+        for($i=0;$i<$row_cnt;$i++)
+        {
+          //$ProductName[] = $row['ProductName'];
+          ?>
   <li>
-    <div class="collapsible-header"><span class="badge">view<i class="material-icons">view_list</i></span><i class="material-icons">filter_drama</i><?php echo $json[$i][0];?></div>
-    <div class="collapsible-body"><p><?php echo $json[$i][1];?>
+    <div class="collapsible-header">
+    <span class="badge">view<i class="material-icons">view_list</i></span><i class="material-icons">filter_drama</i>
+    <?php $row = mysqli_fetch_array($res); $ProductName[] = $row['ProductName'];
+ 
+
+   print $ProductName[$i]; ?>
+    </div>
+    <div class="collapsible-body"><p>
+    <?php  $des[] = $row['Description']; print $des[$i];  ?>
     <a class="waves-effect waves-light btn right red"><i class="material-icons right">delete</i>remove</a>
     <a class="waves-effect waves-light btn right"><i class="material-icons right">buy now</i>buy now</a>
    
