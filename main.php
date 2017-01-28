@@ -131,7 +131,15 @@ session_start();
     $("#clothes").click(function(){
       $("#full").load("clothes.php");
     });
+     
 });
+         $(document).ready(function(){
+    $(".add").click(function(){
+      $id = $('#postId').val($(this).attr('id'));
+      console.log($id);
+
+    });
+  });
 </script>
 </body>
 </html>

@@ -3,6 +3,7 @@
 $result ="select * from additem ";
 $res = mysqli_query($conn,$result);
 $row_cnt = mysqli_num_rows($res);
+
         for($i=0;$i<$row_cnt;$i++)
         { ?>
 <div class="col s12 m4 l4">
@@ -12,10 +13,10 @@ $row_cnt = mysqli_num_rows($res);
       <img class="activator" src="<?php $row = mysqli_fetch_array($res); $filepath[] = $row['img_path']; print $filepath[$i];  ?>" width="300" height="200">
     </div>
     <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4"><?php 
+      <span class="card-title activator grey-text text-darken-4"><?php
+
   $ProductName[] = $row['ProductName'];
  
-
    print $ProductName[$i]; 
 
   ?><i class="material-icons right">more_vert</i></span>
@@ -30,7 +31,8 @@ $row_cnt = mysqli_num_rows($res);
       <a href="#">Full info</a>
       </ul>
 
-      <a class="waves-effect waves-light btn">Add to Cart</a>
+      <a class="waves-effect waves-light btn add" id="<?php echo $row["id"]; ?>">Add to Cart</a>
+      <input type="hidden" name="postId" value="" />
     </div>
   </div>  
 
