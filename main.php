@@ -135,8 +135,9 @@ session_start();
 });
          $(document).ready(function(){
     $(".add").click(function(){
-      $id = $('#postId').val($(this).attr('id'));
-      console.log($id);
+     var id = $(this).attr('id');
+    
+     $("#full").load("addecart.php",{'id': id});
 
     });
   });

@@ -1,5 +1,3 @@
 <?php
-session_start();
- $_SESSION['id']=$row['id'];
-echo $row['id'];
+echo $_REQUEST['id'];
 ?>
