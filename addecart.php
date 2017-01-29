@@ -18,11 +18,22 @@ values (
 '{$row["img_path"]}',
 '{$row["img_type"]}'
 )";
+$sq = "update additem set available = 0 where id = '{$id}'";
 if(! mysqli_query( $conn, $sql ))
 {
 die(mysqli_error($conn));}
-else{ 
+else
+{ 
 echo "\n added to ecart successfully";
+if(! mysqli_query($conn,$sq))
+{
+	die(mysqli_error($conn));
 }
+else
+{
+	echo "updated";
+}
+}
+
 
 ?>
