@@ -1,4 +1,5 @@
 <?php
+session_start();
 $id= $_REQUEST['id'];
 include_once("Connection.php");
 $result ="select * from additem where id  = '{$id}'";
@@ -8,7 +9,7 @@ $row_cnt = mysqli_num_rows($res);
 echo $row['ProductName'];
 $sql="insert into ecart(reg,ProductName,Description,Price,Category,img_name,img_path,img_type) 
 values (
-'{$row["reg"]}',
+'{$_SESSION["reg"]}',
 '{$row["ProductName"]}',
 '{$row["Description"]}',
 '{$row["Price"]}',
