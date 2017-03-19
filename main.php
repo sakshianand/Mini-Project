@@ -8,6 +8,7 @@ session_start();
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <link rel="stylesheet" href="css/animate.css">
+
 </head>
 <body>
 <div class="container">
@@ -53,6 +54,10 @@ session_start();
     </div>
  <div class="container" style="margin-top: 5%;">
   <h3 class="center-align wow zoomIn" >The Products available on Second Hand EMart</h3>
+  <form action="main.php" method="post">
+  <input type="text" name="search" placeholder="Search" onkeydown="searchq();">
+  <input type="submit" class="btn-large" name="" value=">>"></input>
+  </form>
   </div>
   <div class="container wow fadeInDown" data-wow-delay="1s" style="margin-top: 7%;">
 <div class="row" id="full">
