@@ -42,7 +42,7 @@ $d = compress($source_img, $destination_img, 90);**/
 	$sql = "insert into additem(reg,ProductName,Description,Price,Category,img_name,img_path,img_type) values ('{$_SESSION['reg']}','$Name','$des',$price,'$category','$filename','$filepath','$filetype')";
 	if(mysqli_query( $conn, $sql ))
 	{
-		echo "value inserted to db";
+		header( "refresh:0;url=dashboard.php" );
 	}
 	else
 	{
