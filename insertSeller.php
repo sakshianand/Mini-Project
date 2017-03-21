@@ -9,7 +9,7 @@ if(! mysqli_query( $conn, $sql ))
 {
 die(mysqli_error($conn));}
 else{ 
-echo "successful";
+header( "refresh:0;url=loginSeller.html" );
 }
 }
 else

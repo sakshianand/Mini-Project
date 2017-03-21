@@ -9,11 +9,10 @@ $result ="select * from customer where Reg  = '$reg' and Password = '$pass'";
 $res = mysqli_query($conn,$result);
 $row = mysqli_fetch_array($res);
 if($row['Reg'] == $reg && $row['Password'] == $pass)
-{
+{ 
 	$_SESSION['name'] = $row['Name'];
- header('Location: http://localhost/MiniProj/main.php');
+	header('Location: http://localhost/MiniProj/admin.php');
 }
-
 else
 {
 	echo "wrond credentials";

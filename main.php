@@ -43,15 +43,25 @@ session_start();
               <ul>
              <li><div class="divider"></div></li>
                 <li><a href="#">By Price</a></li>
-                <li><a href="#">By Location</a></li>
+                <li><a href="#">By Location</a></li></ul>
             </div>
+
           </li>
 
-        </ul>
+        
       </li>
-    </ul>
+
+    </ul><li><div class="divider"></div></li>
+      
+<li><div class="divider"></div></li>
+      <li class="">
+        <ul class="collapsible collapsible-accordion">
+          <li class="no-padding">
+            <a class="collapsible-header" href="chat.php">Chat with Customer Care<i class="material-icons">arrow_drop_down</i></a>
     </div>
+
     </div>
+
  <div class="container" style="margin-top: 5%;">
   <h3 class="center-align wow zoomIn" >The Products available on Second Hand EMart</h3>
   <form action="main.php" method="post">
