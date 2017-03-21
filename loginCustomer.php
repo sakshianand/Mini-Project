@@ -11,7 +11,7 @@ $row = mysqli_fetch_array($res);
 if($row['Reg'] == $reg && $row['Password'] == $pass)
 {
 	$_SESSION['name'] = $row['Name'];
- header('Location: http://localhost/MiniProj/main.php');
+ header('Location: http://localhost/review/Mini-Project/main.php');
 }
 
 else
