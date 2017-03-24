@@ -8,7 +8,7 @@ session_start();
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <link rel="stylesheet" href="css/animate.css">
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="container">
@@ -50,6 +50,17 @@ session_start();
 
         
       </li>
+      <li><div class="divider"></div></li>
+               <li class="">
+        <ul class="collapsible collapsible-accordion">
+          <li class="no-padding">
+            <a class="collapsible-header" href="ecart.php">ECart<i class="material-icons">arrow_drop_right</i></a>
+            
+
+          </li>
+
+        
+      </li>
 
     </ul><li><div class="divider"></div></li>
       
@@ -65,8 +76,15 @@ session_start();
  <div class="container" style="margin-top: 5%;">
   <h3 class="center-align wow zoomIn" >The Products available on Second Hand EMart</h3>
   <form action="main.php" method="post">
+  <div class="container">
+  <div class="input-field col s6">
+  <i class="material-icons prefix">search</i>
   <input type="text" name="search" placeholder="Search" onkeydown="searchq();">
-  <input type="submit" class="btn-large" name="" value=">>"></input>
+  </div>
+  <div class="input-field col s6"><center>  <input type="submit" class="btn-small" name="" value="Search"></input></center>
+
+  </div>
+  </div>
   </form>
   </div>
   <div class="container wow fadeInDown" data-wow-delay="1s" style="margin-top: 7%;">

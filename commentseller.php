@@ -55,8 +55,8 @@ include_once("Connection.php");
 <div class="container">
 <?php $sql = "select * from comment where seller ='sakshi'";
       $res = mysqli_query($conn,$sql);
-      $tow= mysqli_fetch_array($res);
-  echo'<h2> Hi '; echo $tow['seller'];echo'</h2>';
+      //$tow= mysqli_fetch_array($res);
+  echo'<h2> Hi '; echo 'sakshi';echo'</h2>';
   
       while ($row =  mysqli_fetch_array($res) ){
   echo'<div class="panel-group">';
@@ -72,8 +72,8 @@ include_once("Connection.php");
    echo '</div>
    
   </div>';}?>
-</div>
-
+</div><center>
+<input type="button" value="Go Back" onclick="document.location.href = 'dashboard.php'" ></center>
 
 
 </body>

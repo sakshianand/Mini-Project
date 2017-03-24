@@ -16,18 +16,14 @@ $row_cnt = mysqli_num_rows($res);
     <link rel="stylesheet" href="css/animate.css">
 </head>
 <body>
-<ul id="dropdown1" class="dropdown-content">
-  <li><a href="loginSeller.html">Login as a Seller</a></li>
-  <li><a href="loginCustomer.html">Login as a Customer</a></li>
-  <li class="divider"></li>
-</ul>
+
 
 <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Logo</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="sass.html">About</a></li>
-         <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Login<i class="material-icons right">arrow_drop_down</i></a></li>
+         
       </ul>
     </div>
   </nav>

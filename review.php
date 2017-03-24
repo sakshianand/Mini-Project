@@ -57,10 +57,10 @@ include_once("Connection.php");
 <center>
 <h1>Give Your Feedback</h1><br>
 <form action= "swear.php" method="POST">
-<textarea name ="swear" rows="6" cols="100">
+<input type ="text" name="swear" id ="swear" placeholder="Give your feedaback">
 
 
-</textarea><br><br>
+<br><br>
 <BUTTON type="submit">Submit your review</BUTTON>
 </form>
 </center>

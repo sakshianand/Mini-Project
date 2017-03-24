@@ -1,9 +1,17 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Swear/Bad Word Filter</title>
+</head>
 
+<body>
 <?php
 
 include_once("Connection.php");
-//$string = "This seller is dumb";
+//$strin = "This seller is dumb";
 $string = $_POST['swear'];
+
 $string_to_array = explode(" ",$string);
 
 foreach($string_to_array as $word)
@@ -24,12 +32,8 @@ foreach($string_to_array as $word)
 
 $new_string = implode(" ",$string_to_array);
 
-//echo $new_string;
-
-
-$sql = "insert into comment(comment,user,seller) values('$new_string','akshit','sakshi')";
-$quer = mysqli_query($conn,$sql);
-echo "<b><h3>Your feedback has been recorded.</h3></b>";
-header( "refresh:3;url=main.php" );
+echo $new_string;
 
 ?>
+</body>
+</html>
